@@ -37,24 +37,17 @@ public class StockPage  {
       System.out.println( "Stock info Page Title---->" +driver.getTitle());
       Thread.sleep(1000);
       String texthighvalue1 = driver.findElement(texthighvalue).getText();
-      System.out.println(texthighvalue1);
       Assert.assertTrue(texthighvalue1.contentEquals("52 Week High"));
         String week52highValinfo = driver.findElement(week52highVal).getText();
-        System.out.println("High valaue ---------------"+week52highValinfo);
+        System.out.println(texthighvalue1 +" ---------------"+week52highValinfo);
 
 
       String week52lowValtext = driver.findElement(textlowvalue).getText();
      Assert.assertTrue(week52lowValtext.contentEquals("52 Week Low"));
         String week52lowValinfo = driver.findElement(week52lowVal).getText();
-      System.out.println("Low valaue ----------------"+week52lowValinfo);
-
-
-
-
+      System.out.println(week52lowValtext +" ----------------"+week52lowValinfo);
     }
-
-
-   }
+}
 
 
 
